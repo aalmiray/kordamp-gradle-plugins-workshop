@@ -6,32 +6,32 @@
 
 3. Execute all tests by invoking
 
- * gradlew aggregateAllTestReports
+ * `gradlew aggregateAllTestReports`
 
- Reports are placed under $rootProject.buildDir/reports
+Reports are placed under $rootProject.buildDir/reports
 
 4. Calculate all JaCoCo reports by invoking
 
- * gradlew jacocoRootReport
+ * `gradlew jacocoRootReport`
 
- Reports are placed under $rootProject.buildDir/reports
+Reports are placed under $rootProject.buildDir/reports
 
 == Guide
 
 1. Initialize the guide with the following command
 
- * gradlew :guide:initGide
+ * `gradlew :guide:initGide`
 
 2. Execute the following command
 
- * gradlew :guide:createGuide
+ * `gradlew :guide:createGuide`
 
 3. Inspect subprojects/guide/build/guide
 
 4. Make changes to the asciidoc/production sources and generate the guide once more
 
- * gradlew :guide:createGuide
+ * `gradlew :guide:createGuide`
 
 5. You can package all guide files with
 
- * gradlew :guide:zipGuide
+ * `gradlew :guide:zipGuide`
