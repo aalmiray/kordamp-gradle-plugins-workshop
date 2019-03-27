@@ -8,13 +8,13 @@
 
  * `gradlew aggregateAllTestReports`
 
-Reports are placed under $rootProject.buildDir/reports
+Reports are placed under `$rootProject.buildDir/reports`
 
 4. Calculate all JaCoCo reports by invoking
 
  * `gradlew jacocoRootReport`
 
-Reports are placed under $rootProject.buildDir/reports
+Reports are placed under `$rootProject.buildDir/reports`
 
 == Guide
 
@@ -26,7 +26,7 @@ Reports are placed under $rootProject.buildDir/reports
 
  * `gradlew :guide:createGuide`
 
-3. Inspect subprojects/guide/build/guide
+3. Inspect `subprojects/guide/build/guide`
 
 4. Make changes to the asciidoc/production sources and generate the guide once more
 
