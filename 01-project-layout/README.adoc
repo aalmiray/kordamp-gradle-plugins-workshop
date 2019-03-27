@@ -1,0 +1,7 @@
+= Project Layouts
+
+Complete exercises in the following order:
+
+ * standard
+ * two-level
+ * multi-level

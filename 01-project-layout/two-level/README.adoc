@@ -1,0 +1,23 @@
+= Two-level Layout
+
+1. Create the following project structure
+
+[source]
+----
+.
+├── build.gradle
+├── docs
+│   └── guide
+│       └── guide.gradle
+└── subprojects
+    ├── project1
+    │   └── project1.gradle
+    └── project2
+        └── project2.gradle
+----
+
+2. Verify the build by invoking `gradlew :projects`.
+
+3. Add another subproject named `project3`.
+
+4. Verify the build again by invoking `gradlew :projects`.

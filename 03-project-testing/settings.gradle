@@ -1,0 +1,26 @@
+pluginManagement {
+    repositories {
+        jcenter()
+        maven { url 'https://plugins.gradle.org/m2/' }
+        mavenLocal()
+    }
+}
+
+buildscript {
+    repositories {
+        gradlePluginPortal()
+        mavenLocal()
+    }
+    dependencies {
+      classpath 'org.kordamp.gradle:settings-gradle-plugin:0.15.1'
+    }
+}
+
+apply plugin: 'org.kordamp.gradle.settings'
+
+rootProject.name = 'sample03'
+
+projects {
+    layout = 'two-level'
+    directories = ['docs', 'subprojects']
+}

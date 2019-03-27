@@ -1,0 +1,7 @@
+plugins {
+    id 'org.kordamp.gradle.functional-test'
+}
+
+dependencies {
+    functionalTestCompile 'junit:junit:4.12'
+}

@@ -1,0 +1,43 @@
+= Project Insights
+
+1. Invoke the following commands
+
+ * gradlew :projects
+ * gradlew :dependencies
+ * gradlew :tasks
+ * gradlew :properties
+
+2. Inspect `build.gradle`.
+
+3. Invoke the following commands
+
+ * gradlew :extensions
+ * gradlew :plugins
+ * gradlew :projectProperties
+ * gradlew :effectiveSettings
+
+4. Generate all artifacts for this project by invoking
+
+ * gradlew publish
+
+ Artifacts are placed under $buildDir/repos/snapshot.
+ Notice that AJR manifest are not enriched.
+
+5. Generate all artifacts once more, this time for release
+
+ * gradlew publish -Prelease=true
+
+ Artifacts are placed under $buildDir/repos/release.
+ Notice that JAR manifests are enriched.
+
+6. Modify `build.gradle` with these changes
+
+ * add a property `inceptionYear = 2018` after `config.vendor`.
+ * update the chosen license to `BSD`.
+ * gradlew build
+
+ Notice there are license violations. Fix with
+
+ * gradlew licenseformat
+
+ Notice there are test failures. Fix them and re-run the build command.
