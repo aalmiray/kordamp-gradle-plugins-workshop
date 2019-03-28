@@ -20,7 +20,7 @@ Reports are placed under `$rootProject.buildDir/reports`
 
 1. Initialize the guide with the following command
 
- * `gradlew :guide:initGide`
+ * `gradlew :guide:initGuide`
 
 2. Execute the following command
 
