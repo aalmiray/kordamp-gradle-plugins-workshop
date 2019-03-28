@@ -4,4 +4,4 @@ This repository contains a series of exercises for the link:http://aalmiray.gith
 
 Java8 is needed to run the exercises. The preferred way to run the exercises is through the Gradle wrapper, available in each exercise.
 
-Companion slides available at link:bit.ly/kordamp-workshop-slides[]
+Companion slides available at link:http://bit.ly/kordamp-workshop-slides[]
