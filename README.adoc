@@ -3,3 +3,5 @@
 This repository contains a series of exercises for the link:http://aalmiray.github.io/kordamp-gradle-plugins/[kordamp-gradle-plugins] suite.
 
 Java8 is needed to run the exercises. The preferred way to run the exercises is through the Gradle wrapper, available in each exercise.
+
+Companion slides available at link:bit.ly/kordamp-workshop-slides[]
