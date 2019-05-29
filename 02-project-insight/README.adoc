@@ -20,14 +20,14 @@
 
  * `gradlew publish`
 
-Artifacts are placed under $buildDir/repos/snapshot.
+Artifacts are placed under $buildDir/repos/staging/snapshot.
 Notice that AJR manifest are not enriched.
 
 5. Generate all artifacts once more, this time for release
 
  * `gradlew publish -Prelease=true`
 
-Artifacts are placed under $buildDir/repos/release.
+Artifacts are placed under $buildDir/repos/staging/release.
 Notice that JAR manifests are enriched.
 
 6. Modify `build.gradle` with these changes
