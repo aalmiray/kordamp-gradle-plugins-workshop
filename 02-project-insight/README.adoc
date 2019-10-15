@@ -11,17 +11,26 @@
 
 3. Invoke the following commands
 
+ * `gradlew :tasks --group=Insight`
+ * `gradlew :listProjects`
  * `gradlew :extensions`
  * `gradlew :plugins`
  * `gradlew :projectProperties`
  * `gradlew :effectiveSettings`
+ * `gradlew :configurations`
+ * `gradlew :configurationSettings --configuration=runtime`
+ * `gradlew :sourceSets`
+ * `gradlew :sourceSetSettings`
+ * `gradlew :javaCompileSettings`
+ * `gradlew :testSettings`
+ * `gradlew :publicationSettings`
 
 4. Generate all artifacts for this project by invoking
 
  * `gradlew publish`
 
 Artifacts are placed under $buildDir/repos/staging/snapshot.
-Notice that AJR manifest are not enriched.
+Notice that JAR manifests are not enriched.
 
 5. Generate all artifacts once more, this time for release
 
