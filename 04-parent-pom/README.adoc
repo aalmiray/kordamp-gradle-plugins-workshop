@@ -1,0 +1,24 @@
+= Parent POM
+
+1. Change into `parent-pom` project.
+
+2. Inspect `build.gradle`.
+
+3. Edit ~ src/main/groovy/org/kordamp/gradle/sample/SampleParentPomPlugin.groovy` and make any adjustments you may see fit.
+
+4. Publish the parentpom plugin by invoking
+
+ * `gradlew publishToMavenLocal`
+
+5. Change into `consumer` project.
+
+6. Execute the following command and inspect the output
+
+ * `gradlew effectiveSettings --sections=info,licensing,javadoc`
+
+7. Edit `build.gradle` and make changes to the `config` section to override settings provided by thr parent POM, such as
+   vendor, and/or add a new person to the. ` people` block.
+
+8. Execute the previous gradle command and inspect the output
+
+ * `gradlew effectiveSettings --sections=info,licensing,javadoc`

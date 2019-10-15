@@ -1,0 +1,11 @@
+/*
+ * Copyright 2019 The original author or authors.
+ */
+pluginManagement {
+    repositories {
+        jcenter()
+        gradlePluginPortal()
+    }
+}
+
+rootProject.name = 'parentpom'

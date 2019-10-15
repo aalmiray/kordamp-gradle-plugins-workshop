@@ -1,0 +1,93 @@
+/*
+ * Copyright 2019 The original author or authors.
+ */
+plugins {
+    id 'groovy'
+    id 'org.kordamp.gradle.project' version '0.27.0'
+    id 'org.kordamp.gradle.plugin'  version '0.27.0'
+}
+
+config {
+    release = (rootProject.findProperty('release') ?: false).toBoolean()
+
+    info {
+        name          = 'Gradle Parent POM sample'
+        description   = 'Gradle Parent POM sample'
+        vendor        = 'Kordamp'
+        inceptionYear = '2019'
+        tags          = ['kordamp', 'pom']
+
+        links {
+            website      = 'https://github.com/aalmiray/kordamp-gradle-plugins-workshop'
+            issueTracker = 'https://github.com/aalmiray/kordamp-gradle-plugins-workshop/issues'
+            scm          = 'https://github.com/aalmiray/kordamp-gradle-plugins-workshop.git'
+        }
+
+        specification  { enabled = false }
+
+        implementation { enabled = false }
+
+        people {
+            person {
+                id    = 'anonymous'
+                name  = 'Anonymous'
+                roles = ['developer']
+            }
+        }
+		
+        repositories {
+            repository {
+                name = 'stagingRelease'
+                url  = "${project.buildDir}/repos/staging/release"
+            }
+            repository {
+                name = 'stagingSnapshot'
+                url  = "${project.buildDir}/repos/staging/snapshot"
+            }
+        }
+    }
+
+    groovydoc {
+        replaceJavadoc = true
+        options {
+            link 'https://docs.gradle.org/5.0/javadoc/', 'org.gradle.'
+        }
+    }
+
+    licensing {
+        licenses {
+            license {
+                id = 'Apache-2.0'
+            }
+        }
+    }
+
+    publishing {
+        signing             = true
+        releasesRepository  = 'stagingRelease'
+        snapshotsRepository = 'stagingSnapshot'
+    }
+
+    plugin {
+        enabled             = true
+        id                  = project.pluginId
+        implementationClass = 'org.kordamp.gradle.sample.SampleParentPomPlugin'
+    }
+}
+
+normalization {
+    runtimeClasspath {
+        ignore('/META-INF/MANIFEST.MF')
+    }
+}
+
+repositories {
+    jcenter()
+    gradlePluginPortal()
+}
+
+dependencies {
+    compile gradleApi()
+
+    compile 'org.kordamp.gradle:project-gradle-plugin:0.27.0'
+}
